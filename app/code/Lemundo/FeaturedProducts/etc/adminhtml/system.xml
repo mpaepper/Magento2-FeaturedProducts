@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../Backend/etc/system_file.xsd">
+    <system>
+        <tab id="lemundo" translate="label" sortOrder="100">
+            <label>Lemundo</label>
+        </tab>
+        <section id="featured_products" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Featured Products</label>
+            <tab>lemundo</tab>
+            <resource>Lemundo_FeaturedProducts::config_featured_products</resource>
+            <group id="settings" translate="label" type="text" sortOrder="90" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Settings</label>
+                <field id="limit" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Limit</label>
+                    <comment>Number of products displayed</comment>
+                </field>
+                <field id="image_width" translate="label comment" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Image Width</label>
+                    <comment>Pixels</comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
