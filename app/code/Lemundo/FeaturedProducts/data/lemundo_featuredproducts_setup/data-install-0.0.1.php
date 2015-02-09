@@ -26,7 +26,8 @@ $installer->addAttribute(
         'comparable' => false,
         'visible_on_front' => false,
         'used_in_product_listing' => true,
-        'unique' => false
+        'unique' => false,
+        'group' => 'Product Details'
     ]
 );
 
