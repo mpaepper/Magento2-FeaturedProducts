@@ -1,7 +1,8 @@
 <?php 
     $_products = $this->getProducts();
     $_config = $this->getConfig();
-    $_columnWidth = 100 / $_config['limit'];
+    $_columnWidth = 100 / $this->getProductLimit();
+    $_imageWidth = $this->getImageWidth();
 ?>
 
 <h2><?php echo __('Featured Products') ?></h2>
@@ -11,7 +12,7 @@
         <li class="item" style="width: <?php echo $_columnWidth; ?>%">
             <div class="product">
                 <a href="<?php echo $_product->getProductUrl() ?>" class="product photo product-item-photo">
-                    <img src="<?php echo $this->getImageHelper()->init($_product, 'image')->resize($_config['image_width']); ?>" alt="<?php echo $this->escapeHtml($_product->getName()) ?>" />
+                    <img src="<?php echo $this->getImageHelper()->init($_product, 'image')->resize($_imageWidth); ?>" alt="<?php echo $this->escapeHtml($_product->getName()) ?>" />
                     <span class="product-item-name"><?php echo $this->escapeHtml($_product->getName()) ?></span>
                 </a>
                 <?php echo $this->getProductPrice($_product) ?>
@@ -19,4 +20,3 @@
         </li>
     <?php endforeach; ?>
 </ul>
-

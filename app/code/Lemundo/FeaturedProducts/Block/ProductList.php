@@ -62,7 +62,7 @@ class ProductList extends \Magento\Catalog\Block\Product\AbstractProduct {
      * Get product collection
      */
     public function getProducts() {
-        $limit = $this->_config['limit'];
+        $limit = $this->getProductLimit();
 
         $collection = $this->_collection
                            ->addMinimalPrice()
@@ -96,4 +96,20 @@ class ProductList extends \Magento\Catalog\Block\Product\AbstractProduct {
         return $this->_config;
     }
 
+    /**
+     * Get the configured limit of products
+     * @return int
+     */
+    public function getProductLimit() {
+        return $this->_config["limit"];
+    }
+    
+    /**
+     * Get the configured width of images
+     * @return int
+     */
+    public function getImageWidth() {
+        return $this->_config["image_width"];
+    }
+    
 }
