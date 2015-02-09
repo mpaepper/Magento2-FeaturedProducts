@@ -38,12 +38,13 @@ You can install this module in three ways:
 
 After either of theses three ways, you need to activate the module by editing your app/etc/config.php file:
 
-  ```
+```
   ...
   'modules' => 
   array (
     'Lemundo_FeaturedProducts' => 1,
-    ...```
+    ...
+```
 
 Afterwards, make sure that Magento installs the new attribute by running: ```php setup/index.php update```
 
