@@ -9,9 +9,9 @@
     <head>
         <css src="Lemundo_FeaturedProducts::css/module.css"/>
     </head>
-    <body>
+<!--    <body>
         <referenceContainer name="content">
             <block class="Lemundo\FeaturedProducts\Block\ProductList" name="lemundo.featured.list" as="featured" before="-" template="list.phtml"/>
         </referenceContainer>
-    </body>
+    </body> -->
 </page>
